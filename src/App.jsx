@@ -36,8 +36,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(App.selectAudio);
-
     return (
       <React.Fragment>
         <Container>
