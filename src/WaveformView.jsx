@@ -86,7 +86,9 @@ class WaveformView extends Component {
       };
     }
     else if (this.props.audioContext) {
-      options.audioContext = this.props.audioContext;
+      options.webAudio = {
+        audioContext: this.props.audioContext
+      };
     }
 
     this.audioElementRef.current.src = this.props.audioUrl;
@@ -132,7 +134,7 @@ class WaveformView extends Component {
     const time = this.peaks.player.getCurrentTime();
 
     this.peaks.points.add({
-      timestamp: time,
+      time: time,
       editable: true
     });
   };
