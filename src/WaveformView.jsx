@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Button, ButtonToolbar } from 'react-bootstrap';
 import Peaks from 'peaks.js'
 
 import './WaveformView.css';
-
-// Props:
-//   audioUrl
-//   audioContentType
-//   waveformDataUrl
-//   audioContext
 
 class WaveformView extends Component {
   constructor(props) {
@@ -149,5 +144,14 @@ class WaveformView extends Component {
     console.log("Peaks.js is ready");
   }
 }
+
+WaveformView.propTypes = {
+  audioUrl:         PropTypes.string,
+  audioContentType: PropTypes.string,
+  waveformDataUrl:  PropTypes.string,
+  audioContext:     PropTypes.object,
+  setSegments:      PropTypes.func,
+  setPoints:        PropTypes.func
+};
 
 export default WaveformView;
