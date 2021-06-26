@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Button, ButtonToolbar } from 'react-bootstrap';
-import Peaks from 'peaks.js'
+import Peaks from 'peaks.js';
+
+import { createPointMarker, createSegmentMarker } from './MarkerFactories';
+import { createSegmentLabel } from './SegmentLabelFactory';
 
 import './WaveformView.css';
 
@@ -72,7 +75,10 @@ class WaveformView extends Component {
       },
       mediaElement: this.audioElementRef.current,
       keyboard: true,
-      logger: console.error.bind(console)
+      logger: console.error.bind(console),
+      createSegmentMarker: createSegmentMarker,
+      createSegmentLabel: createSegmentLabel,
+      createPointMarker: createPointMarker
     };
 
     if (this.props.waveformDataUrl) {
@@ -108,35 +114,47 @@ class WaveformView extends Component {
   }
 
   zoomIn = () => {
-    this.peaks.zoom.zoomIn();
+    if (this.peaks) {
+      this.peaks.zoom.zoomIn();
+    }
   };
 
   zoomOut = () => {
-    this.peaks.zoom.zoomOut();
+    if (this.peaks) {
+      this.peaks.zoom.zoomOut();
+    }
   };
 
   addSegment = () => {
-    const time = this.peaks.player.getCurrentTime();
+    if (this.peaks) {
+      const time = this.peaks.player.getCurrentTime();
 
-    this.peaks.segments.add({
-      startTime: time,
-      endTime: time + 10,
-      editable: true
-    });
+      this.peaks.segments.add({
+        startTime: time,
+        endTime: time + 10,
+        labelText: 'Test Segment',
+        editable: true
+      });
+    }
   };
 
   addPoint = () => {
-    const time = this.peaks.player.getCurrentTime();
+    if (this.peaks) {
+      const time = this.peaks.player.getCurrentTime();
 
-    this.peaks.points.add({
-      time: time,
-      editable: true
-    });
+      this.peaks.points.add({
+        time: time,
+        labelText: 'Test Point',
+        editable: true
+      });
+    }
   };
 
   logMarkers = () => {
-    this.props.setSegments(this.peaks.segments.getSegments());
-    this.props.setPoints(this.peaks.points.getPoints());
+    if (this.peaks) {
+      this.props.setSegments(this.peaks.segments.getSegments());
+      this.props.setPoints(this.peaks.points.getPoints());
+    }
   }
 
   onPeaksReady = () => {
