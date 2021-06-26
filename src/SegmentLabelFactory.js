@@ -6,7 +6,7 @@ export function createSegmentLabel(options) {
     return null;
   }
 
-  var label = new Label({
+  const label = new Label({
     x: 12,
     y: 16
   });

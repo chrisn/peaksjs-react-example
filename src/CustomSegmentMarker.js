@@ -15,7 +15,7 @@ class CustomSegmentMarker {
       y: 0.5
     });
 
-    var color = this._options.segment.color;
+    const color = this._options.segment.color;
 
     this._tag = new Tag({
       fill:             color,
@@ -34,8 +34,13 @@ class CustomSegmentMarker {
 
     this._label.add(this._tag);
 
-    var labelText = this._options.segment.labelText +
-                    (this._options.startMarker ? ' start' : ' end');
+    let labelText = this._options.segment.labelText;
+
+    if (labelText) {
+      labelText += ' ';
+    }
+
+    labelText += this._options.startMarker ? 'Start' : 'End';
 
     this._text = new Text({
       text:       labelText,
@@ -75,11 +80,11 @@ class CustomSegmentMarker {
   };
 
   fitToView() {
-    var height = this._options.layer.getHeight();
+    const height = this._options.layer.getHeight();
 
-    var labelHeight = this._text.height() + 2 * this._text.padding();
-    var offsetTop = 14;
-    var offsetBottom = 26;
+    const labelHeight = this._text.height() + 2 * this._text.padding();
+    const offsetTop = 14;
+    const offsetBottom = 26;
 
     this._group.y(offsetTop + labelHeight + 0.5);
 

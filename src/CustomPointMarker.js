@@ -70,11 +70,11 @@ class CustomPointMarker {
   };
 
   fitToView() {
-    var height = this._options.layer.getHeight();
+    const height = this._options.layer.getHeight();
 
-    var labelHeight = this._text.height() + 2 * this._text.padding();
-    var offsetTop = 14;
-    var offsetBottom = 26;
+    const labelHeight = this._text.height() + 2 * this._text.padding();
+    const offsetTop = 14;
+    const offsetBottom = 26;
 
     this._group.y(offsetTop + labelHeight + 0.5);
 

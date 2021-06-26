@@ -22,7 +22,7 @@ SimplePointMarker.prototype.init = function(group) {
 };
 
 SimplePointMarker.prototype.fitToView = function() {
-  var height = this._options.layer.getHeight();
+  const height = this._options.layer.getHeight();
 
   this._line.points([0.5, 0, 0.5, height]);
 };
