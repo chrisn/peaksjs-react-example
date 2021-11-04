@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "license": "Apache-2.0",
   "dependencies": {
-    "konva": "~8.1.1",
-    "peaks.js": "git://github.com/bbc/peaks.js.git#master",
+    "konva": "~8.2.3",
+    "peaks.js": "~0.27.0",
     "react": "~17.0.2",
-    "react-bootstrap": "~1.6.1",
+    "react-bootstrap": "~2.0.1",
     "react-dom": "~17.0.2"
   },
   "devDependencies": {
