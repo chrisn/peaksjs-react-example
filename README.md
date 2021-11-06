@@ -12,10 +12,10 @@ Note that this is just a demo and not a feature-complete reusable React componen
 Ensure you have Node.js 14.3.0 or later installed, then:
 
 ```bash
-$ git clone git@github.com:chrisn/peaks-react-example.git
-$ cd peaks-react-example
-$ npm install
-$ npm start
+git clone git@github.com:chrisn/peaks-react-example.git
+cd peaks-react-example
+npm install
+npm start
 ```
 
 This should open your web browser to view the demo at
