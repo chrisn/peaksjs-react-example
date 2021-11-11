@@ -13,7 +13,7 @@ Ensure you have Node.js 14.3.0 or later installed, then:
 
 ```bash
 git clone git@github.com:chrisn/peaksjs-react-example.git
-cd peaks-react-example
+cd peaksjs-react-example
 npm install
 npm start
 ```
