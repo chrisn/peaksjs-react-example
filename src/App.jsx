@@ -60,7 +60,7 @@ class App extends Component {
               name="options"
               defaultValue={1}
               onChange={this.handleSelectedAudioChange}>
-              <ToggleButton id={1} value={1}>Bird song</ToggleButton>
+              <ToggleButton id={1} value={1}>Bird song</ToggleButton>&nbsp;
               <ToggleButton id={2} value={2}>Car passing</ToggleButton>
             </ToggleButtonGroup>
           </ButtonToolbar>
