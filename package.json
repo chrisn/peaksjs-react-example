@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "license": "Apache-2.0",
   "dependencies": {
-    "konva": "~8.2.3",
-    "peaks.js": "~0.27.0",
+    "konva": "~8.3.4",
+    "peaks.js": "~1.0.0",
     "react": "~17.0.2",
     "react-bootstrap": "~1.6.4",
     "react-dom": "~17.0.2",
