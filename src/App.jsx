@@ -48,8 +48,8 @@ class App extends Component {
           </p>
 
           <p>
-            Audio content is copyright BBC, from the <a href="http://bbcsfx.acropolis.org.uk/?q=07023003">BBC Sound Effects</a> library,
-            used under the terms of the <a href="https://github.com/bbcarchdev/Remarc/blob/master/doc/2016.09.27_RemArc_Content%20licence_Terms%20of%20Use_final.pdf">RemArc Licence</a>.
+            Audio content is copyright BBC, from the <a href="https://sound-effects.bbcrewind.co.uk">BBC Sound Effects</a> library,
+            used under the terms of the <a href="https://sound-effects.bbcrewind.co.uk/licensing">RemArc Licence</a>.
           </p>
 
           <h3>Select audio</h3>
