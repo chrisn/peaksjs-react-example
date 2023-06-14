@@ -5,9 +5,9 @@
   "dependencies": {
     "konva": "~8.3.4",
     "peaks.js": "~2.1.0",
-    "react": "~18.1.0",
-    "react-bootstrap": "~1.6.4",
-    "react-dom": "~18.1.0",
+    "react": "~18.2.0",
+    "react-bootstrap": "~1.6.7",
+    "react-dom": "~18.2.0",
     "waveform-data": "~4.3.0"
   },
   "devDependencies": {
