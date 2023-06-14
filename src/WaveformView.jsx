@@ -69,9 +69,11 @@ class WaveformView extends Component {
 
   initPeaks() {
     const options = {
-      containers: {
-        overview: this.overviewWaveformRef.current,
-        zoomview: this.zoomviewWaveformRef.current
+      overview: {
+        container: this.overviewWaveformRef.current
+      },
+      zoomview: {
+        container: this.zoomviewWaveformRef.current
       },
       mediaElement: this.audioElementRef.current,
       keyboard: true,
